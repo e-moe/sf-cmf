@@ -3,10 +3,13 @@
 namespace Acme\DemoBundle\Document;
 
 use Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page;
+use Doctrine\ODM\PHPCR\Mapping\Annotations as PHPCR;
 
+/**
+ * @PHPCR\Document()
+ */
 class Workshop extends Page
 {
-
     /**
      * @return Event
      */
@@ -22,4 +25,4 @@ class Workshop extends Page
     {
         $this->setParentDocument($event);
     }
-} 
+}

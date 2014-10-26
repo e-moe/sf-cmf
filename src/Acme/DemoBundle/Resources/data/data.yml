@@ -1,0 +1,43 @@
+Acme\DemoBundle\Document\Event:
+    event{1..2}:
+        id: /cms/simple/events/<current()>
+        label: <city()>
+        title: @self->label
+        body: <paragraph()>
+
+#Acme\DemoBundle\Document\Workshop:
+#    workshop{1..2}:
+#        id: /cms/simple/events/1/<current()>
+#        label: <city()>
+#        title: @self->label
+#        body: <paragraph()>
+#    workshop{3..4}:
+#        id: /cms/simple/events/2/<current()>
+#        label: <city()>
+#        title: @self->label
+#        body: <paragraph()>
+#        #parentDocument: @event*
+#
+#Acme\DemoBundle\Document\Timeslot:
+#    timeslot{1..2}:
+#        id: /cms/simple/events/1/1/<current()>
+#        label: <city()>
+#        title: @self->label
+#        body: <paragraph()>
+#        room: <state()>
+#        totalPlaces: <numberBetween(15, 250)>
+#    timeslot{3..4}:
+#        id: /cms/simple/events/1/2/<current()>
+#        label: <city()>
+#        title: @self->label
+#        body: <paragraph()>
+#        room: <state()>
+#        totalPlaces: <numberBetween(15, 250)>
+#    timeslot{5..6}:
+#        id: /cms/simple/events/2/1/<current()>
+#        label: <city()>
+#        title: @self->label
+#        body: <paragraph()>
+#        room: <state()>
+#        totalPlaces: <numberBetween(15, 250)>
+#        #parentDocument: @workshop*

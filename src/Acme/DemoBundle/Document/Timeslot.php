@@ -3,13 +3,23 @@
 namespace Acme\DemoBundle\Document;
 
 use Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page;
+use Doctrine\ODM\PHPCR\Mapping\Annotations as PHPCR;
 
+/**
+ * @PHPCR\Document()
+ */
 class Timeslot extends Page
 {
-    /** @var string */
+    /**
+     * @PHPCR\String()
+     * @var string
+     */
     private $room;
 
-    /** @var integer */
+    /**
+     * @PHPCR\Int()
+     * @var integer
+     */
     private $totalPlaces;
 
     /**
@@ -59,4 +69,4 @@ class Timeslot extends Page
     {
         $this->setParentDocument($event);
     }
-} 
+}

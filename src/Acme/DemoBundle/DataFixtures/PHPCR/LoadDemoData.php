@@ -43,6 +43,9 @@ class LoadDemoData implements FixtureInterface
         // load the pages
         Fixtures::load(array(__DIR__.'/../../Resources/data/pages.yml'), $manager);
 
+        // load the data
+        Fixtures::load(array(__DIR__.'/../../Resources/data/data.yml'), $manager);
+
         // add menu item for login
         $loginMenuNode = new MenuNode('login');
         $loginMenuNode->setLabel('Admin Login');
